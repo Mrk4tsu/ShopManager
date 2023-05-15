@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Register Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='register.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="full-container"">
+        <div class="header">
+            <ion-icon name="bag-handle"></ion-icon>
+            <h1><a href="login.html">TTK Shop</a></h1>
+            <h2>Đăng Ký</h1>
+        </div>
+        <div class="Clear"></div>
+        <img id="login_img"src="./IMG/login_img.png">
+        <div class="register-container">
+            <div class="register-box">
+                <h2 class="register-title">Đăng Ký</h2>
+                <button class="btn google-register"><ion-icon name="logo-google"></ion-icon>Đăng ký với Google</button>
+                <button class="btn facebook-register"><ion-icon name="logo-facebook" id="fb"></ion-icon>Đăng ký với Facebook</button>
+                <div class="or" style="">
+                  <span class="line" style="padding: 0 20px; border-bottom: 1px solid #BFBFBF;"></span>
+                  <p>Hoặc</p>
+                  <span class="line" style="padding: 0 20px; border-bottom: 1px solid #BFBFBF;"></span>
+                </div>
+                <form>
+                  <div class="name-group">
+                    <div>
+                      <input type="text" id="first-name" name="first-name" placeholder="Nhập họ của bạn..." required>
+                    </div>
+                    <div>
+                      <input type="text" id="last-name" name="last-name" placeholder="Nhập tên của bạn..." required>
+                    </div>
+                  </div>
+                  <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email của bạn..." required>
+                  <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại của bạn..." required>
+                  <input type="text" id="cmnd" name="cmnd" placeholder="Nhập số CCCD của bạn..." required>
+                  <div class="DOB">
+                    <label for="birthdate">Sinh nhật</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                  </div>    
+                  <div class="gender-group">
+                    <div id="male">
+                      <label>Nam</label><input type="radio" name="gender" value="male" required>
+                    </div>
+                    <div id="female">
+                      <label id="fm">Nữ</label><input type="radio" name="gender" value="female" required>
+                    </div>
+                    <div id="other">
+                      <label>Khác</label><input type="radio" name="gender" value="LGBTQ" required>
+                    </div>
+                  </div>
+                  <div class="reg-btn">
+                    <button type="submit" class="btn next-btn">Tiếp tục</button>
+                  </div>
+                </form>
+                <p class="login-link">Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a></p>
+              </div>  
+              <p class="license">© 2023 TTK Shop. Tất cả các quyền được bảo lưu.</p>            
+        </div>
+        <hr style="height: 1px; border-style: solid">
+    </div>
+</body>
+<script src="register.js"></script>
+<script>
+  function isValidEmail(email) {
+    var emailRegex = /\S+@\S+\.\S+/;
+    return emailRegex.test(email);
+  }
+  function isValidPhoneNumber(phoneNumber) {
+    var phoneRegex = /^0\d{9}$/;
+    return phoneRegex.test(phoneNumber);
+  }
+  function calculateAge(birthday) { 
+    var currentDate = new Date(); 
+    var age = currentDate.getFullYear() - birthday.getFullYear(); 
+    var monthDifference = currentDate.getMonth() - birthday.getMonth(); 
+    if (monthDifference < 0 || (monthDifference === 0 && currentDate.getDate() < birthday.getDate())) { 
+        age--; 
+    } 
+    return age; 
+  }
+  let nextBtn=document.querySelector('.next-btn');
+  nextBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    var fnameField = document.getElementById('first-name').value;
+    var lnameField = document.getElementById('last-name').value;
+    var emailField = document.getElementById('email').value;
+    var phoneField = document.getElementById('phone').value;
+    var identityField = document.getElementById('cmnd').value;
+    const birthdateInput = document.getElementById('birthdate').value;
+    const birthdate = new Date(birthdateInput);
+    const age = calculateAge(birthdate);
+    const genderInputs = document.querySelectorAll('input[name="gender"]');
+    let genderSelected = false;
+    for (let i = 0; i < genderInputs.length; i++) {
+        if (genderInputs[i].checked) {
+            genderSelected = true;
+            break; }
+    }
+    if (fnameField == "" || lnameField == "" || emailField == "" || phoneField == "" || identityField == "" || birthdateInput == "" || genderSelected == false) {
+        alert("Vui lòng nhập toàn bộ thông tin!");
+        return false;}
+    else if (!isValidEmail(emailField)) {
+        alert("Email sai định dạng. Vui lòng nhập lại!");
+        return false;}
+    else if (!isValidPhoneNumber(phoneField)) {
+        alert("Số điện thoại sai định dạng (10 số). Vui lòng nhập lại!");
+        return false;}
+    else if (isNaN(identityField) || identityField.length !== 12) {
+        alert("CCCD sai định dạng (12 số). Vui lòng nhập lại!");
+        return false;}
+    else if (age < 18) {
+        alert("Phải đủ 18 tuổi mới được đăng ký!");
+        return false;}
+    else {
+        window.location.replace("register2.html");
+    }
+  });
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

@@ -1,0 +1,29 @@
+.report-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .report-form div {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .report-form label {
+    flex: 0 0 30%;
+    margin-right: 1rem;
+    text-align: right;
+  }
+  
+  .report-form input {
+    flex: 1;
+  }
+  .report-form label {
+    display: block;
+    margin-bottom: 0.5rem; /* tùy chỉnh khoảng cách giữa các label */
+  }
+  
+  .report-form input {
+    display: block;
+  }
+    

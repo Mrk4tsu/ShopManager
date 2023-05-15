@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Main Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='display1.css'>
+    <script src='main.js'></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <header class="mainheader">
+            <div class="header-left">
+                <ion-icon name="bag-handle"></ion-icon>
+                <p><span>TTK Shop</span></p>
+                <p>Quản lý shop</p>
+            </div>
+            <div class="header-right">
+                <div class="user-account">
+                    <div class="user">
+                        <div class="avatar">A</div>
+                        <p class="user-info">Admin</p>
+                        <div class="acc-content">
+                            <ul>
+                                <li id="menu-item">
+                                    <ion-icon name="document-text-outline"></ion-icon>
+                                    <p>Hồ Sơ TK</p>
+                                </li>
+                                <li>
+                                    <ion-icon name="log-out-outline"></ion-icon>
+                                    <p><a href="/SHOPMANAGEMENT/login/login.html">Đăng Xuất</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ion-icon name="grid-outline"></ion-icon>
+                    <div class="menu-content">
+                        <div class="content">
+                            <div id="product" class="mn">
+                                <div class="icon" style="background-color: #6875E0;">
+                                    <i class='bx bx-gift'></i>
+                                </div>
+                                <p>Sản Phẩm</p>
+                            </div>
+                            <div id="category" class="mn">
+                                <div class="icon" style="background-color: #A0C359;">
+                                    <i class='bx bx-menu'></i>
+                                </div>
+                                <p>Danh Mục</p>
+                            </div>
+                            <div id="order" class="mn">
+                                <div class="icon" style="background-color: #FC6117;">
+                                    <i class='bx bx-store-alt' ></i>
+                                </div>
+                                <p>Đơn Hàng</p>
+                            </div>
+                            <div id="marketing" class="mn">
+                                <div class="icon" style="background-color: #42E1EE;">
+                                    <i class='bx bxs-badge-dollar'></i>
+                                </div>
+                                <p>Marketing</p>
+                            </div>
+                            <div id="revenue" class="mn">
+                                <div class="icon" style="background-color: #FFC42E;">
+                                    <i class='bx bx-money'></i>
+                                </div>
+                                <p>Doanh Thu</p>
+                            </div>
+                            <div id="money" class="mn">
+                                <div class="icon" style="background-color: #3288DF;">
+                                    <i class='bx bx-wallet' ></i>
+                                </div>
+                                <p>Số Dư</p>
+                            </div>
+                            <div id="analys" class="mn">
+                                <div class="icon" style="background-color: #62B6EF;">
+                                    <i class='bx bx-line-chart' ></i>
+                                </div>
+                                <p>Phân Tích Bán Hàng</p>
+                            </div>
+                            <div id="setting" class="mn">
+                                <div class="icon" style="background-color: #848F8E;">
+                                    <i class='bx bxs-cog' ></i>
+                                </div>
+                                <p>Thiết Lập Shop</p>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="noti">
+                    <i class='bx bx-bell'></i>
+                </div>
+            </div>
+        </header>
+        <div class="Clear"></div>
+        <div class="content">             
+            <div class="content__left">                 
+                    <!--1-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="cube-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Vận Chuyển</p>
+                                <ol>
+                                    <li><a href="#">Quản Lý Vận Chuyển</a></li>
+                                    <li><a href="#">Giao Hàng Loạt</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>               
+
+                    <!--2-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="newspaper-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Quản Lý Đơn Hàng</p>
+                                <ol>
+                                    <li><a href="#">Tất Cả</a></li>
+                                    <li><a href="#">Hủy Đơn</a></li>
+                                    <li><a href="#">Trả Hàng/Hoàn Tiền</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>
+                        
+
+                    <!--3-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="cart-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Quản Lý Sản Phẩm</p>
+                                <ol>
+                                    <li><a href="#">Tất Cả Sản Phẩm</a></li>
+                                    <li><a href="#">Thêm Sản Phẩm</a></li>
+                                    <li><a href="#">Sản Phẩm Vi Phạm</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>
+                        
+
+                    <!--4-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="pricetag-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Kênh Marketing</p>
+                                <ol>
+                                    <li><a href="#">Kênh Marketing</a></li>
+                                    <li><a href="#">Mã Giảm Giá</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>
+                        
+
+                    <!--5-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="analytics-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Dữ Liệu</p>
+                                <ol>
+                                    <li><a href="#">Phân Tích Bán Hàng</a></li>
+                                    <li><a href="#">Hiệu Quả Hoạt Động</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>
+                        
+
+                    <!--1-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="chatbubbles-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Chăm Sóc Khách Hàng</p>
+                                <ol>
+                                    <li><a href="#">Trợ Lý Chat</a></li>
+                                    <li><a href="#">Hỏi - Đáp</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>
+                        
+
+                    <!--7-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Quản Lý User</p>
+                                <ol>
+                                    <li><a href="#">Khách Hàng</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>
+
+                    <!--8-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="storefront-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Quản lý Shop</p>
+                                <ol>
+                                    <li><a href="#">Danh Mục Của Shop</a></li>
+                                    <li><a href="#">Kho Hình Ảnh/Video</a></li>
+                                    <li><a href="/SHOPMANAGEMENT/report/report1.html">Báo Cáo</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>
+
+                    <!--9-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="settings-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Thiết Lập Website</p>
+                                <ol>
+                                    <li><a href="#">Cài Đặt</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>  
+
+                    <!--10-->
+                        <div class="list">
+                            <div class="icon-left">
+                                <ion-icon name="help-circle-outline"></ion-icon>
+                            </div>
+                            <div class="lable">
+                                <p>Trợ Giúp</p>
+                                <ol>
+                                    <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+                                </ol>
+                            </div>
+                            <div class="icon-right">
+                                <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                                <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                            </div>
+                        </div>  
+            </div>
+
+            <div class="content__right">
+              
+                <div class="content_items_left">
+                    <div>
+                        <a href="#"><img src="items/image1.png"></a>
+                    </div>
+                    <div class="content__primary">
+                        <p class="cil-title"><span style="padding-top: 200px;">Danh Sách Cần Làm </span><br>Những việc bạn sẽ phải làm</p>
+                        <ul class="list list1">
+                            <li>
+                                <h3>0</h3><p>Chờ Xác Nhận</p>
+                            </li>
+                            <li>
+                                <h3>0</h3><p>Chờ Lấy Hàng</p>
+                            </li>
+                            <li>
+                                <h3>0</h3><p>Đã Xử Lý</p>
+                            </li>
+                            <li id="list-diff">
+                                <h3>0</h3><p>Đơn Hủy</p>
+                            </li>
+                        </ul>
+                        <ul class="list list1">
+                            <li>
+                                <h3>0</h3>
+                                <p>Trả Hàng/Hoàn Tiền<br>Chờ Xử Lý</p>
+                            </li>
+                            <li>
+                                <h3>0</h3><p>Sản Phẩm Bị Tạm Khóa</p>
+                            </li>
+                            <li>
+                                <h3>0</h3><p>Sản Phẩm Hết Hàng</p>
+                            </li>
+                            <li id="list-diff">
+                                <h3>0</h3><p>Chương Trình Khuyến Mãi<br>Chờ Xử Lý</p>
+                            </li>
+                        </ul>
+                    </div> 
+                    
+                    <div class="content__primary" id="analysis">
+                        <div class="chart-lable">
+                            <div>
+                                <p class="cil-title"><span>Phân tích bán hàng</span> (Hôm nay 00:00 GMT +7 15:00)<br>
+                                    Tổng quan dữ liệu của shop đối với đơn hàng đã xác nhận<br>
+                                </p>
+                            </div>
+                            <div>
+                                <p><a href="#">Xem thêm</a></p>
+                            </div>
+                        </div>
+
+                        <div class="information">
+                            <div>
+                                <p>Doanh số</p>
+                                <h2>0</h2>
+                                <img src="items/image5.png" alt="">
+                            </div>
+
+                            <div>
+                                <ul class="list">
+                                    <li>
+                                        <p id="top-list">Lượt truy cập</p>
+                                        <h3>0</h3>
+                                        <p>Vs hôm qua 0,00%</p>
+                                    </li>
+                                    
+                                    <li>
+                                        <p id="top-list">Lượt xem</p>
+                                        <h3>0</h3>
+                                        <p>Vs hôm qua 0,00%</p>
+                                    </li>
+                                </ul>
+                                <br>
+                                <hr width="95%" color="#e8e8e8">
+                                <ul class="list">
+                                    <li>
+                                        <p id="top-list">Đơn hàng</p>
+                                        <h3>0</h3>
+                                        <p>Vs hôm qua 0,00%</p>
+                                    </li>
+                                    
+                                    <li>
+                                        <p id="top-list">Tỷ lệ chuyển đổi</p>
+                                        <h3>0</h3>
+                                        <p>Vs hôm qua 0,00%</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content__primary" id="Marketing">
+                        <div class="chart-lable">
+                            <div>
+                                <p class="cil-title"><span>Kênh Marketing</span> <br>
+                                    Công cụ Marketing & Đăng ký chương trình Khuyến Mãi
+                                </p>
+                            </div>
+                            <div>
+                                <p><a href="#">Xem thêm</a></p>
+                            </div>
+                        </div>
+                        <div class="marketing-picture">
+                            <p id="text">Chương Trình Nổi Bật</p>
+                            <div class="mp-list">
+                                <div class="mp1">Lịch</div>
+                                <div class="mp2">Chương Trình Giảm Giá Sản Phẩm</div>
+                                <div class="mp3">Chương Trình Mã Giảm Giá</div>
+                            </div>
+                            <img src="items/image6.png" alt="">
+
+                            <p id="text">Công Cụ Marketing</p>
+                            <img src="items/image7.png" id="img-7">
+                        </div>
+
+                    </div>
+
+                    <div class="content__primary" id="work">
+                        <div class="chart-lable">
+                            <div>
+                                <p class="cil-title"><span>Hiệu Quả Hoạt Động</span> <br>
+                                    Bảng Hiệu Quả Hoạt Động giúp Người Bán hiểu rõ hơn về hoạt động buôn bán của Shop mình<br>dựa trên những chỉ tiêu sau:
+                                </p>
+                            </div>
+                            <div>
+                                <p><a href="#">Xem thêm</a></p>
+                            </div>
+                        </div>
+                        <div class="type-1">
+                            <img src="items/image8.png">
+                        </div>
+                    </div>
+
+                    <div class="content__primary cp-final">
+                        <div class="chart-lable">
+                            <div>
+                                <p class="cil-title"><span>Điểm Sao Quả Tạ</span> (Từ 2 Tháng 1 2023 đến 2 Tháng 4 2023) <br>
+                                    Hệ thống Sao Quả Tạ giúp Người bán duy trì dịch vụ bán hàng chất lượng, mang đến sự hài lòng cho Người mua.
+                                </p>
+                            </div>
+                            <div>
+                                <p><a href="#">Xem thêm</a></p>
+                            </div>
+                        </div>
+
+                        <div class="last-items">
+                            <img src="items/image9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content_items_right">
+                    <div class="info">
+                        <div>
+                            <h3>Thông báo</h3> 
+                        </div>
+                        
+                        <div>
+                            <p><a href="#">Xem thêm</a></p>
+                        </div>                      
+                    </div>
+                    <div class="sec">
+                        <h4>QUẢNG CÁO GOOGLE ADS VỚI SHOPEE</h4>
+                        <p>🔮Khám phá cách tối ưu Quảng cáo Google Ads với Shopee và nhận ngay MÃ ƯU ĐÃI 🎁khi Shop chi tiêu đủ trong vòng 60 ngày, tính từ ngày Shop bắt đầu chạy chiến dịch👉BẤM để xem chi tiết!</p>                           
+                        <p><span>Mới</span> · Hôm Nay 00:00</p> 
+                        
+                        <h4>🎉LIVESTREAM LÀ CÓ KHO VOUCHER 🎉</h4>
+                        <p>✨Bật live nhận mã giảm 9K và Freeship 25K. Người người xem live hóng mã ngon. Tung voucher xịn - Chốt đơn cực đỉnh ✨</p>                      
+                        <p><span>Mới</span> · Hôm Nay 00:00</p> 
+                            
+                        <h4>🎉LIVESTREAM LÀ CÓ KHO VOUCHER 🎉</h4>
+                        <p>✨Bật live nhận mã giảm 9K và Freeship 25K. Người người xem live hóng mã ngon. Tung voucher xịn - Chốt đơn cực đỉnh ✨</p>
+                        <p><span>Mới</span> · Hôm Nay 00:00</p> 
+                         
+                        <h4>X2 đơn hàng SALE 4.4</h4>
+                        <p>⭐Tạo Mua kèm deal sock để có cơ hội: ✅ X2 đơn hàng ✅ Ưu tiên hiển thị ✅ Giới thiệu sản phẩm mới</p>  
+                        <p><span>Mới</span> · Hôm Nay 00:00</p> 
+
+                        <h4>ĐẨY ĐƠN NHANH CÙNG GÓI VOUCHER XTRA MỚI</h4>
+                        <p>Gia tăng hiển thị và bùng nổ đơn hàng với Gói Voucher Xtra cùng nhiều ưu đãi khủng: ✔️Voucher giảm trực tiếp lên đến 200.000đ cho Người mua ✔️Miễn phí tham gia Shopee Flash Sale trị giá 1.299.000Đ ✔️Gia tăng hiển thị Tìm hiểu ngay! 👉</p>   
+                        <p><span>Mới</span> · Hôm Nay 00:00</p> 
+
+                        <h4>VOUCHER XTRA - GÓI DỊCH VỤ MỚI TỪ SHOPEE</h4>
+                        <p>Gói Voucher Xtra được nâng cấp từ Gói Hoàn Xu Xtra, với thêm nhiều ưu đãi hấp dẫn: ✔️Voucher giảm trực tiếp lên đến 200.000đ cho Người mua ✔️Miễn phí tham gia Shopee Flash Sale trị giá 1.299.000Đ ✔️Không tăng phí dịch vụ Tìm hiểu ngay! 👉</p>   
+                        <p><span>Mới</span> · Hôm Nay 00:00</p> 
+                    </div>
+                </div>                
+            </div>
+            <div class="chat">
+                <div class="chat-container">
+                    <img id="chat1" src="./items/chat1.png">
+                    <div class="chat2-container">
+                        <div class="chat2-content">
+                            <img id="chat2" src="./items/chat2.png">
+                            <ion-icon name="chevron-down-sharp" id="closeBtn"></ion-icon>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>          
+    </div>
+</body>
+<script>
+const labels = document.querySelectorAll('.lable');
+labels.forEach(label => {
+    label.addEventListener('click', () => {
+    const ol = label.querySelector('ol');
+    const iconic = label.parentElement.querySelector('.iconic');
+
+        if (ol.style.display === 'none' || !ol.style.display) {
+        ol.style.display = 'block';
+        iconic.setAttribute('name', 'chevron-up-sharp');
+        } else {
+        ol.style.display = 'none';
+        iconic.setAttribute('name', 'chevron-down-sharp');
+        }
+    });
+});
+let chat1 = document.querySelector('#chat1');
+let chat2 = document.querySelector('.chat2-container');
+let closeBtn = document.querySelector('#closeBtn')
+chat1.addEventListener('click', () => {
+    chat2.style.display = 'block';
+    chat1.style.visibility = 'hidden';
+});
+closeBtn.addEventListener('click', () => {
+    chat2.style.display = 'none';
+    chat1.style.visibility = 'visible';
+});
+</script>
+</html>

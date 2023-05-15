@@ -1,0 +1,143 @@
+.login-container{
+    height: 90.5vh;
+    width: 64%;
+    z-index: 1;
+    background-color: #fff;
+    position: relative;
+}
+.login-box{
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top:13%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}  
+.login-title {
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 1em;
+    color: #F47458;
+}
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+} 
+.google-login {
+    background-color: #dd4b39;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.facebook-login {
+    background-color: #3B5998;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}  
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.checkbox-group{
+  display: block;
+  flex-basis: 70%;
+}
+.checkbox-group label {
+    margin-left: 4px;
+    font-size: 14px;
+    display: inline-block;
+} 
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.1em;
+    display: inline-block;
+} 
+.remember-group{
+    display: flex;
+}
+.btn-login{
+    display: flex;
+    justify-content: center;
+}
+.login-btn{
+    background-color: #ee4d2d;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    width: 50%;
+}
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+} 
+.register-link {
+    text-align: center;
+    font-size: 14px;
+}  
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 9999;
+}
+  
+.spinner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid rgba(238, 77, 45, 0.2);
+    border-top-color: #ee4d2d;
+    animation: spin 1.5s ease-in-out infinite both;
+    position: relative;
+    transform-origin: center center;
+}
+@keyframes spin {
+    from{
+        border-top-color: #ee4d2d;
+    }
+    to { transform: rotate(360deg);
+        border-top-color: rgba(238, 77, 45, 0.2); }
+} 
+.loader-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #ee4d2d;
+    animation: none !important;
+} 
+#content.fadein {
+    visibility: visible;
+    animation: fadein 1s ease-in-out forwards;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

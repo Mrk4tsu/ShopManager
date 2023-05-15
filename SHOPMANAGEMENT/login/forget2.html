@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Forget Password Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='forget.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='forget.js'></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("zq7JaoPj6jlVzQqxM");
+      })();
+    </script>
+</head>
+<body>
+    <div class="full-container"">
+        <div class="header">
+            <ion-icon name="bag-handle"></ion-icon>
+            <h1><a href="login.html">TTK Shop</a></h1>
+            <h2>Quên Mật Khẩu</h1>
+        </div>
+        <div class="Clear"></div>
+        <img id="login_img"src="./IMG/login_img.png">
+        <div class="fp-container">
+            <div class="fp-box">
+                <h2 class="fp-title">Quên Mật Khẩu</h2>
+                <form>
+                  <p>Một mã OTP đã được gửi đến địa chỉ email của bạn. Vui lòng kiểm tra và nhập mã OTP vào vùng được chỉ định bên dưới.</p>
+                  <input type="text" autocomplete="one-time-code" id="otp" placeholder="Mời nhập mã OTP..." required>
+                  <div class="fp-btn">
+                    <button type="submit" class="btn forget-btn">Xác nhận</button>
+                  </div>
+                </form>
+              </div>  
+              <p class="license">© 2023 TTK Shop. Tất cả các quyền được bảo lưu.</p>            
+        </div>
+        <hr style="height: 1px; border-style: solid">
+    </div>
+</body>
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+  var code = urlParams.get('code');
+  let confirmBtn=document.querySelector('.forget-btn');
+  confirmBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    var otpField = document.getElementById('otp').value;
+    if (otpField == "")
+    {
+      alert('Vui lòng nhập mã OTP!');
+      return false;
+    }
+    else if (isNaN(otpField) || otpField.length !== 6)
+    {
+      alert('OTP sai định dạng (6 số). Vui lòng nhập lại!');
+      return false;
+    }
+    else
+    {
+      if(otpField==code)
+        window.location.href="forget3.html";
+      else
+      {
+        alert('Mã OTP sai!');
+        return false;
+      }
+    }
+  });
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

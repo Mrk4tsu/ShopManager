@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Register Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='register.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="full-container"">
+        <div class="header">
+            <ion-icon name="bag-handle"></ion-icon>
+            <h1><a href="login.html">TTK Shop</a></h1>
+            <h2>Đăng Ký</h1>
+        </div>
+        <div class="Clear"></div>
+        <img id="login_img"src="./IMG/login_img.png">
+        <div class="register-container">
+            <div class="register-box_2">
+                <h2 class="register-title">Đăng Ký</h2>
+                <button class="btn google-register"><ion-icon name="logo-google"></ion-icon>Đăng ký với Google</button>
+                <button class="btn facebook-register"><ion-icon name="logo-facebook" id="fb"></ion-icon>Đăng ký với Facebook</button>
+                <div class="or" style="">
+                  <span class="line" style="padding: 0 20px; border-bottom: 1px solid #BFBFBF;"></span>
+                  <p>Hoặc</p>
+                  <span class="line" style="padding: 0 20px; border-bottom: 1px solid #BFBFBF;"></span>
+                </div>
+                <form>
+                  <div class="input-group">
+                    <input type="password" id="password" class="ps" name="password" placeholder="Nhập mật khẩu..." required>
+                    <ion-icon name="eye-off-outline" class="icon"></ion-icon>
+                    <!-- <ion-icon name="eye-outline"></ion-icon> -->
+                  </div>
+                  <div class="input-group">
+                    <input type="password" id="re-password" class="re-ps" name="re-password" placeholder="Nhập lại mật khẩu..." required>
+                    <ion-icon name="eye-off-outline" class="re-icon"></ion-icon>
+                    <!-- <ion-icon name="eye-outline"></ion-icon> -->
+                  </div>
+                  <div class="checkbox-group">
+                    <input type="checkbox" id="remember-license" name="remember-license">
+                    <label for="remember-license">Bằng việc đăng kí, bạn đã đồng ý với <span>Điều khoản dịch vụ</span> và <span>Chính sách bảo mật</span> của TTK Shop</label>
+                  </div>
+                  <div class="reg-btn">
+                    <button type="submit" class="btn register-btn">Đăng ký</button>
+                  </div>
+                </form>
+                <p class="login-link">Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a></p>
+              </div>  
+              <p class="license">© 2023 TTK Shop. Tất cả các quyền được bảo lưu.</p>            
+        </div>
+        <hr style="height: 1px; border-style: solid">
+    </div>
+</body>
+<script src="register.js"></script>
+<script>
+  let pass_text=document.querySelector('.ps');
+  let re_pass_text=document.querySelector('.re-ps');
+  let pass_icon=document.querySelector('.icon');
+  let re_pass_icon=document.querySelector('.re-icon')
+  pass_icon.addEventListener('click',() =>{
+      if(pass_text.type=='password')
+      {
+          pass_text.type='text';
+          pass_icon.setAttribute('name','eye-outline')
+      }
+      else
+      {
+          pass_text.type='password';
+          pass_icon.setAttribute('name','eye-off-outline')
+      }
+  });
+  re_pass_icon.addEventListener('click',() =>{
+    if(re_pass_text.type=='password')
+    {
+        re_pass_text.type='text';
+        re_pass_icon.setAttribute('name','eye-outline')
+    }
+    else
+    {
+        re_pass_text.type='password';
+        re_pass_icon.setAttribute('name','eye-off-outline')
+    }
+  });
+  let registerBtn=document.querySelector('.register-btn');
+  registerBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    var passField = document.getElementById('password').value;
+    var repassField = document.getElementById('re-password').value;
+    const rememberLicenseCheckbox = document.getElementById('remember-license');
+    if (passField == "" || repassField == "") {
+        alert("Vui lòng nhập toàn bộ thông tin!");
+        return false;}
+    else if (passField.length < 8) {
+        alert("Mật khẩu tối thiểu 8 ký tự!");
+        return false;}
+    else if (passField != repassField) {
+        alert("Mật khẩu nhập lại không trùng khớp!");
+        return false;}
+    else if (!rememberLicenseCheckbox.checked) {
+        alert("Bạn chưa đồng ý với điều khoản của chúng tôi!");
+        return false;}
+    else {
+        alert("Đăng ký thành công!");
+        window.location.replace("login.html");
+    }
+  });
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Report Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='report.css'>
+    <style>
+        #m-three {
+            color: #ee4d2d;
+            font-weight: 700;
+            border-bottom: 3px solid #ee4d2d;
+        }
+    </style>
+</head>
+<body>
+    <header class="mainheader">
+        <div class="header-left">
+            <ion-icon name="bag-handle"></ion-icon>
+            <p><a href = "/SHOPMANAGEMENT/main/display1.html"><span>Trang Chủ</span></a></p>
+            <ion-icon name="chevron-forward" id="arrow-icon"></ion-icon>
+            <p>Báo Cáo</p>
+        </div>
+        <div class="header-right">
+            <div class="user-account">
+                <div class="user">
+                    <div class="avatar">A</div>
+                    <p class="user-info">Admin</p>
+                    <div class="acc-content">
+                        <ul>
+                            <li id="menu-item">
+                                <ion-icon name="document-text-outline"></ion-icon>
+                                <p>Hồ Sơ TK</p>
+                            </li>
+                            <li>
+                                <ion-icon name="log-out-outline"></ion-icon>
+                                <p><a href="/SHOPMANAGEMENT/login/login.html">Đăng Xuất</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <ion-icon name="grid-outline"></ion-icon>
+                <div class="menu-content">
+                    <div class="content">
+                        <div id="product" class="mn">
+                            <div class="icon" style="background-color: #6875E0;">
+                                <i class='bx bx-gift'></i>
+                            </div>
+                            <p>Sản Phẩm</p>
+                        </div>
+                        <div id="category" class="mn">
+                            <div class="icon" style="background-color: #A0C359;">
+                                <i class='bx bx-menu'></i>
+                            </div>
+                            <p>Danh Mục</p>
+                        </div>
+                        <div id="order" class="mn">
+                            <div class="icon" style="background-color: #FC6117;">
+                                <i class='bx bx-store-alt' ></i>
+                            </div>
+                            <p>Đơn Hàng</p>
+                        </div>
+                        <div id="marketing" class="mn">
+                            <div class="icon" style="background-color: #42E1EE;">
+                                <i class='bx bxs-badge-dollar'></i>
+                            </div>
+                            <p>Marketing</p>
+                        </div>
+                        <div id="revenue" class="mn">
+                            <div class="icon" style="background-color: #FFC42E;">
+                                <i class='bx bx-money'></i>
+                            </div>
+                            <p>Doanh Thu</p>
+                        </div>
+                        <div id="money" class="mn">
+                            <div class="icon" style="background-color: #3288DF;">
+                                <i class='bx bx-wallet' ></i>
+                            </div>
+                            <p>Số Dư</p>
+                        </div>
+                        <div id="analys" class="mn">
+                            <div class="icon" style="background-color: #62B6EF;">
+                                <i class='bx bx-line-chart' ></i>
+                            </div>
+                            <p>Phân Tích Bán Hàng</p>
+                        </div>
+                        <div id="setting" class="mn">
+                            <div class="icon" style="background-color: #848F8E;">
+                                <i class='bx bxs-cog' ></i>
+                            </div>
+                            <p>Thiết Lập Shop</p>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="noti">
+                <i class='bx bx-bell'></i>
+            </div>
+        </div>
+    </header>
+    <div class="Clear"></div> 
+    <div class="content-container">
+        <div class="content-left">
+            <!--1-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="cube-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                <p>Vận Chuyển</p>
+                <ol>
+                    <li><a href="#">Quản Lý Vận Chuyển</a></li>
+                    <li><a href="#">Giao Hàng Loạt</a></li>
+                </ol>                            
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>                        
+            </div>               
+        
+            <!--2-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Quản Lý Đơn Hàng</p>
+                    <ol>
+                        <li><a href="#">Tất Cả</a></li>
+                        <li><a href="#">Hủy Đơn</a></li>
+                        <li><a href="#">Trả Hàng/Hoàn Tiền</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>
+            </div>                               
+        
+            <!--3-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Quản Lý Sản Phẩm</p>
+                    <ol>
+                        <li><a href="#">Tất Cả Sản Phẩm</a></li>
+                        <li><a href="#">Thêm Sản Phẩm</a></li>
+                        <li><a href="#">Sản Phẩm Vi Phạm</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>
+            </div>                                                       
+            
+            <!--4-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="pricetag-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Kênh Marketing</p>
+                    <ol>
+                        <li><a href="#">Kênh Marketing</a></li>
+                        <li><a href="#">Mã Giảm Giá</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>
+            </div>                                                     
+            
+            <!--5-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="analytics-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Dữ Liệu</p>
+                    <ol>
+                        <li><a href="#">Phân Tích Bán Hàng</a></li>
+                        <li><a href="#">Hiệu Quả Hoạt Động</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>
+            </div>                    
+                                    
+            <!--6-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Chăm Sóc Khách Hàng</p>
+                    <ol>
+                        <li><a href="#">Trợ Lý Chat</a></li>
+                        <li><a href="#">Hỏi - Đáp</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>
+            </div>                                                          
+            
+            <!--7-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Quản Lý User</p>
+                    <ol>
+                        <li><a href="#">Khách Hàng</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>
+            </div>                        
+            
+            <!--8-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="storefront-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Quản lý Shop</p>
+                    <ol>
+                        <li><a href="#">Danh Mục Của Shop</a></li>
+                        <li><a href="#">Kho Hình Ảnh/Video</a></li>
+                        <li><a href="/SHOPMANAGEMENT/report/report1.html" style="color:#ee4d2d">Báo Cáo</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>
+            </div>                        
+            
+            <!--9-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="settings-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Thiết Lập Website</p>
+                    <ol>
+                        <li><a href="#">Cài Đặt</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>                    
+            </div>
+
+            <!--10-->
+            <div class="list">
+                <div class="icon-left">
+                    <ion-icon name="help-circle-outline"></ion-icon>
+                </div>
+                <div class="lable">
+                    <p>Trợ Giúp</p>
+                    <ol>
+                        <li><a href="#">Hướng Dẫn Sử Dụng</a></li>
+                    </ol>
+                </div>
+                <div class="icon-right">
+                    <ion-icon name="chevron-up-sharp" class="iconic"></ion-icon>
+                    <!-- <ion-icon name="chevron-down-sharp"></ion-icon> -->
+                </div>
+            </div>
+        </div>
+        <div class="content-right">
+            <div class="report-content">
+                <div class="top-content">
+                    <ul class="left-top-content">
+                        <li><h2>Báo Cáo Của Shop</h2></li>
+                        <li><p>Xem và tải lại các báo cáo trong vòng 6 tháng qua</p></li>
+                    </ul>
+                    <button id="new-rp" name="new-rp"><ion-icon name="add-outline"></ion-icon>Lập báo cáo</button>              
+                </div>
+                <center><hr></center>
+                <div class="middle-content">
+                    <ul>
+                        <li id="m-one"><a href="report1.html">Xuất đơn hàng</a></li>
+                        <li id="m-two"><a href="report2.html">Tài liệu vận chuyển</a></li>
+                        <li id="m-three">Báo cáo số dư</li>
+                        <li id="m-four"><a href="report4.html">Báo cáo thu nhập</a></li>
+                        <li id="m-five"><a href="report5.html">Báo cáo Marketing</a></li>
+                        <li id="m-six"><a href="report6.html">Báo cáo phân tích bán hàng</a></li>
+                    </ul>
+                    <center><hr></center>
+                </div>
+                <div class="bottom-content">
+                    <table>
+                        <thead>
+                          <tr>
+                            <th id="t-one">Loại báo cáo</th>
+                            <th id="t-two">Thời gian lập</th>
+                            <th id="t-three">Tài khoản lập</th>
+                            <th id="t-four">Tên báo cáo</th>
+                            <th id="t-five">Hoạt động</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!--Thêm dòng mới vào đây-->
+                          <tr>
+                            <td colspan="5">
+                                <img src="./0.png" width="10%">
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="bg">
+            <div class="bg-content">
+                <h2>Báo Cáo</h2>
+                <div class="content">
+                    <div class="label-input-row">
+                        <label for="report_id">Mã báo cáo</label>
+                        <input type="text" name="report_id" id="report_id" placeholder="Nhập mã báo cáo">
+                    </div>
+                    <div class="label-input-row">
+                        <label for="report_name">Tên báo cáo</label>
+                        <input type="text" name="report_name" id="report_name" placeholder="Nhập tên báo cáo">
+                    </div>
+                    <div class="label-input-row">
+                        <label for="report-type">Loại báo cáo</label>
+                        <select id="report-type" name="report-type">
+                          <option>Xuất đơn hàng</option>
+                          <option>Tài liệu vận chuyển</option>
+                          <option>Báo cáo số dư</option>
+                          <option>Báo cáo thu nhập</option>
+                          <option>Báo cáo Marketing</option>
+                          <option>Báo cáo phân tích bán hàng</option>
+                        </select>
+                    </div>
+                    <div class="label-input-row">
+                        <label for="time">Thời gian</label>
+                        <div name="time" id="time">
+                          <input type="datetime-local" id="start-time" name="start-time">
+                          <hr>
+                          <input type="datetime-local" id="end-time" name="end-time">
+                        </div>
+                    </div>                
+                    <div class="label-input-row">
+                        <label for="content" id="lbc">Nội dung</label>
+                        <div class="table-container">
+                            <table id="content">
+                                <thead>
+                                  <tr>
+                                    <th>Mã Đơn hàng</th>
+                                    <th>Mã kiện hàng</th>
+                                    <th>Ngày đặt hàng</th>
+                                    <th>Trạng thái đơn hàng</th>
+                                    <th>Lý do hủy</th>
+                                    <th>Nhận xét của khách hàng</th>
+                                    <th>Mã vận đơn</th>
+                                    <th>Đơn vị vận chuyển</th>
+                                    <th>Phương thức thanh toán</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>DH001</td>
+                                    <td>KH001</td>
+                                    <td>01/01/2021</td>
+                                    <td>Đang xử lý</td>
+                                    <td></td>
+                                    <td>Khách hàng rất hài lòng với sản phẩm</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>COD</td>
+                                  </tr>
+                                  <tr>
+                                    <td>DH002</td>
+                                    <td>KH002</td>
+                                    <td>03/01/2021</td>
+                                    <td>Hủy</td>
+                                    <td>Sản phẩm không đúng mô tả</td>
+                                    <td>Khách hàng rất không hài lòng với sản phẩm</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>COD</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>                       
+                    </div>
+                    <div class="label-input-row">
+                        <label for="user">Người lập báo cáo</label>
+                        <input type="text" name="user" id="user">
+                    </div>
+                    <div class="label-input-row">
+                        <label for="report-date">Ngày lập</label>
+                        <input type="datetime-local" id="report-date" name="report-date">
+                    </div>
+                    <div class="label-input-row">
+                        <label for="modification-date">Ngày sửa đổi</label>
+                        <input type="datetime-local" id="modification-date" name="modification-date">
+                    </div>
+                </div>
+                <div class="btns">
+                    <button name="confirm" id="confirm">Xác nhận</button>
+                    <button name="cancel" id="cancel">Hủy bỏ</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chat-container">
+                <img id="chat1" src="./chat1.png">
+                <div class="chat2-container">
+                    <div class="chat2-content">
+                        <img id="chat2" src="./chat2.png">
+                        <ion-icon name="chevron-down-sharp" id="closeBtn"></ion-icon>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+<script src='report.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js"></script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Forget Password Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='forget.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="full-container"">
+        <div class="header">
+            <ion-icon name="bag-handle"></ion-icon>
+            <h1><a href="login.html">TTK Shop</a></h1>
+            <h2>Quên Mật Khẩu</h1>
+        </div>
+        <div class="Clear"></div>
+        <img id="login_img"src="./IMG/login_img.png">
+        <div class="fp-container">
+            <div class="fp-box">
+                <h2 class="fp-title">Quên Mật Khẩu</h2>
+                <form>
+                  <div class="input-group">
+                    <input type="password" id="password" class="ps" name="password" placeholder="Mật khẩu mới..." required>
+                    <ion-icon name="eye-off-outline" class="icon"></ion-icon>
+                    <!-- <ion-icon name="eye-outline"></ion-icon> -->
+                  </div>
+                  <div class="input-group">
+                    <input type="password" id="re-password" class="re-ps" name="re-password" placeholder="Nhập lại mật khẩu mới..." required>
+                    <ion-icon name="eye-off-outline" class="re-icon"></ion-icon>
+                    <!-- <ion-icon name="eye-outline"></ion-icon> -->
+                  </div>
+                  <div class="fp-btn">
+                    <button type="submit" class="btn forget-btn">Xác nhận</button>
+                  </div>
+                </form>
+              </div>  
+              <p class="license">© 2023 TTK Shop. Tất cả các quyền được bảo lưu.</p>            
+        </div>
+        <hr style="height: 1px; border-style: solid">
+    </div>
+</body>
+<script>
+  let pass_text=document.querySelector('.ps');
+  let re_pass_text=document.querySelector('.re-ps');
+  let pass_icon=document.querySelector('.icon');
+  let re_pass_icon=document.querySelector('.re-icon')
+  pass_icon.addEventListener('click',() =>{
+      if(pass_text.type=='password')
+      {
+          pass_text.type='text';
+          pass_icon.setAttribute('name','eye-outline')
+      }
+      else
+      {
+          pass_text.type='password';
+          pass_icon.setAttribute('name','eye-off-outline')
+      }
+  });
+  re_pass_icon.addEventListener('click',() =>{
+    if(re_pass_text.type=='password')
+    {
+        re_pass_text.type='text';
+        re_pass_icon.setAttribute('name','eye-outline')
+    }
+    else
+    {
+        re_pass_text.type='password';
+        re_pass_icon.setAttribute('name','eye-off-outline')
+    }
+  });
+  let confirmBtn=document.querySelector('.forget-btn');
+  confirmBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    var passField = document.getElementById('password').value;
+    var repassField = document.getElementById('re-password').value;
+    const rememberLicenseCheckbox = document.getElementById('remember-license');
+    if (passField == "" || repassField == "") {
+        alert("Vui lòng nhập toàn bộ thông tin!");
+        return false;}
+    else if (passField.length < 8) {
+        alert("Mật khẩu tối thiểu 8 ký tự!");
+        return false;}
+    else if (passField != repassField) {
+        alert("Mật khẩu nhập lại không trùng khớp!");
+        return false;}
+    else {
+        alert("Đổi mật khẩu thành công!");
+        window.location.replace("login.html");
+    }
+  });
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

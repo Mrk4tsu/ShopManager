@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='login.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div id="loading">
+      <div class="spinner"></div>
+      <span class="loader-text">TTK</span>
+    </div>
+
+    <div id="content" class="full-container" style="visibility: none;">
+        <div class="header">
+            <ion-icon name="bag-handle"></ion-icon>
+            <h1>TTK Shop</h1>
+            <h2>Kênh Người Bán</h1>
+        </div>
+        <div class="Clear"></div>
+        <img id="login_img"src="./IMG/login_img.png">
+        <div class="login-container">
+            <div class="login-box">
+                <h2 class="login-title">Đăng Nhập</h2>
+                <button class="btn google-login"><ion-icon name="logo-google"></ion-icon>Đăng nhập với Google</button>
+                <button class="btn facebook-login"><ion-icon name="logo-facebook" id="fb"></ion-icon>Đăng nhập với Facebook</button>
+                <div class="or" style="">
+                  <span class="line" style="padding: 0 20px; border-bottom: 1px solid #BFBFBF;"></span>
+                  <p>Hoặc</p>
+                  <span class="line" style="padding: 0 20px; border-bottom: 1px solid #BFBFBF;"></span>
+                </div>
+                <form>
+                  <div class="input-group">
+                    <input type="text" id="user" name="user" placeholder="Email/Số điện thoại" required>
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                  </div>
+                  <div class="input-group">
+                    <input type="password" id="password" class="ps" name="password" placeholder="Mật khẩu" required>
+                    <ion-icon name="eye-off-outline" class="icon"></ion-icon>
+                    <!-- <ion-icon name="eye-outline"></ion-icon> -->
+                  </div>
+                </form>
+                <form>
+                  <div class="remember-group">
+                    <div class="checkbox-group">
+                      <input type="checkbox" id="remember-me" name="remember-me">
+                      <label for="remember-me">Ghi nhớ đăng nhập</label>
+                    </div>
+                    <a class="forgot-password" href="forget1.html">Quên mật khẩu?</a>
+                  </div>
+                  <div class="btn-login">
+                    <button type="submit" class="btn login-btn">Đăng nhập</button>
+                  </div>
+                </form>
+                <p class="register-link">Chưa có tài khoản? <a href="register1.html">Đăng ký ngay</a></p>
+              </div>  
+              <p class="license">© 2023 TTK Shop. Tất cả các quyền được bảo lưu.</p>            
+        </div>
+        <hr style="height: 1px; border-style: solid">
+    </div>
+</body>
+<script src='login.js'></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

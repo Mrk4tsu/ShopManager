@@ -1,0 +1,71 @@
+.fp-container{
+    height: 90.5vh;
+    width: 64%;
+    z-index: 1;
+    background-color: #fff;
+    position: relative;
+}
+.fp-box{
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top:28%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}  
+#fp1{
+    top:30%;
+}
+.btn {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+} 
+.fp-title {
+    font-size: 2em;
+    text-align: left;
+    margin-bottom: 1em;
+    color: #F47458;
+}
+.fp-btn{
+    display: flex;
+    justify-content: center;
+}
+.forget-btn{
+    background-color: #ee4d2d;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    width: 50%;
+}
+#email,#otp{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+form p{
+    font-size: 16px;
+    margin-bottom: 10px;
+} 
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+  
+
+
+
+  

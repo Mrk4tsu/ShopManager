@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Forget Password Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='forget.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='forget.js'></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init("zq7JaoPj6jlVzQqxM");
+      })();
+    </script>
+</head>
+<body>
+    <div class="full-container"">
+        <div class="header">
+            <ion-icon name="bag-handle"></ion-icon>
+            <h1><a href="login.html">TTK Shop</a></h1>
+            <h2>Quên Mật Khẩu</h1>
+        </div>
+        <div class="Clear"></div>
+        <img id="login_img"src="./IMG/login_img.png">
+        <div class="fp-container">
+            <div class="fp-box" id="fp1">
+                <h2 class="fp-title">Quên Mật Khẩu</h2>
+                <form>
+                  <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email của bạn..." required>
+                  <div class="fp-btn">
+                    <button type="submit" class="btn forget-btn">Xác nhận</button>
+                  </div>
+                </form>
+              </div>  
+              <p class="license">© 2023 TTK Shop. Tất cả các quyền được bảo lưu.</p>            
+        </div>
+        <hr style="height: 1px; border-style: solid">
+    </div>
+</body>
+<script>
+  function isValidEmail(email) {
+    var emailRegex = /\S+@\S+\.\S+/;
+    return emailRegex.test(email);
+  }
+  function generateRandomCode() {
+  return Math.floor(Math.random() * (999999 - 100000 + 1) + 100000); // Tạo một số ngẫu nhiên gồm 6 chữ số từ 100000 đến 999999
+}
+
+let confirmBtn=document.querySelector('.forget-btn');
+confirmBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  var emailField = document.getElementById('email').value;
+  if (emailField == "") {
+    alert('Vui lòng nhập email!');
+    return false;
+  } else if (!isValidEmail(emailField)) {
+    alert('Email sai định dạng. Vui lòng nhập lại!');
+    return false;
+  } else {
+    const code = generateRandomCode(); // Tạo mã ngẫu nhiên
+    var templateParams = {
+      to_email: emailField,
+      code: code.toString()
+    };
+    emailjs.send('service_4sg6rwq', 'template_jvk2g4e', templateParams)
+      .then(function(response) {
+        console.log('Email gửi thành công!', response.status, response.text);
+        // Chuyển sang trang forget2.html với thông tin email và mã xác nhận đã được gửi đi
+        window.location.href = `forget2.html?email=${encodeURIComponent(emailField)}&code=${encodeURIComponent(code)}`;
+      }, function(error) {
+        console.error('Lỗi khi gửi email:', error);
+        alert('Có lỗi xảy ra khi gửi email. Vui lòng thử lại sau!');
+      });
+  }
+});
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
